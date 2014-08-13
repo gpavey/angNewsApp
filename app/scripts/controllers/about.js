@@ -5,9 +5,9 @@
  * @name angNewsAppApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the angNewsAppApp
+ * Controller of the angNewsApp
  */
-angular.module('angNewsAppApp')
+angular.module('angNewsApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

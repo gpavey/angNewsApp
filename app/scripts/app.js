@@ -1,27 +1,27 @@
 'use strict';
-
+/* global app:true */
 /**
  * @ngdoc overview
  * @name angNewsAppApp
  * @description
- * # angNewsAppApp
+ * # angNewsApp
  *
  * Main module of the application.
  */
-angular
-  .module('angNewsAppApp', [
+var app = angular.module('angNewsApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+  app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsController'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
