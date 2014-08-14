@@ -14,7 +14,8 @@ var app = angular.module('angNewsApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ]);
 
   app.config(function ($routeProvider) {
@@ -23,6 +24,10 @@ var app = angular.module('angNewsApp', [
         templateUrl: 'views/posts.html',
         controller: 'PostsController'
       })
+      .when('/posts/:postId', {
+        templateUrl: 'views/showpost.html',
+        controller: 'PostViewController'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
@@ -30,4 +35,6 @@ var app = angular.module('angNewsApp', [
       .otherwise({
         redirectTo: '/'
       });
+
   });
+  app.constant('FIREBASE_URL', 'https://amber-torch-3049.firebaseio.com/');
