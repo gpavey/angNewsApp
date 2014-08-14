@@ -28,9 +28,9 @@ var app = angular.module('angNewsApp', [
         templateUrl: 'views/showpost.html',
         controller: 'PostViewController'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/register', {
+        templateUrl: '/views/register.html',
+        controller: 'AuthController'
       })
       .otherwise({
         redirectTo: '/'
