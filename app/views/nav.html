@@ -26,6 +26,11 @@
         <a href="#" ng-click="logout()">Logout</a>
       </li>
     </ul>
+    <ul class="nav navbar-right navbar-nav" ng-show="signedOut()">
+      <li>
+        <a href="#" ng-click="login()">Login</a>
+      </li>
+    </ul>
 
 
   </div><!-- /.navbar-collapse -->

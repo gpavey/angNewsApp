@@ -32,6 +32,10 @@ var app = angular.module('angNewsApp', [
         templateUrl: '/views/register.html',
         controller: 'AuthController'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'AuthController'
+      })
       .otherwise({
         redirectTo: '/'
       });
